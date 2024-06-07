@@ -31,6 +31,10 @@ This repository contains a set of automated scripts designed to perform various 
 - **Port Scanning**:
   - Naabu
   - Nmap
+ 
+- **xss**:
+  - freq
+  - qrsreplace
 
  **Test**: Run it on debian linux os (tested) (after running installation script restart the os for all tools to run properly)
  
