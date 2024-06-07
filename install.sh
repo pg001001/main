@@ -185,3 +185,19 @@ else
   echo "File $CONFIG_YML_PATH exists. Overwriting with new configuration."
   echo "$CONFIG_CONTENT" > "$CONFIG_YML_PATH"
 fi
+
+
+# exploit installation
+
+# xss 
+echo "Installing qsreplace..."
+go install -v github.com/tomnomnom/qsreplace@latest
+sudo cp ~/go/bin/qsreplace /usr/bin/
+
+echo "Installing freq..."
+go install github.com/takshal/freq@latest
+sudo cp ~/go/bin/freq /usr/bin/
+
+
+
+
