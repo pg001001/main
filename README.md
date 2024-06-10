@@ -35,6 +35,13 @@ This repository contains a set of automated scripts designed to perform various 
 - **xss**:
   - freq
   - qrsreplace
+ 
+  - **sql**:
+  - ghuari
+ 
+  - **lfi / directory transversal**:
+  - dotdotpwn
+  - liffy
 
  **Test**: Run it on debian linux os (tested) (after running installation script restart the os for all tools to run properly)
  
