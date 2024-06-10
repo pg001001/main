@@ -1,6 +1,8 @@
 #!/bin/bash
 
 #!/bin/bash
+mkdir /root/tool
+
 sudo apt-get update
 
 sudo apt-get install -y libcurl4-openssl-dev
@@ -129,6 +131,13 @@ mv ~/Gf-Patterns/*.json ~/.gf
 pipx install git+https://github.com/devanshbatham/ParamSpider.git
 pipx ensurepath
 
+# install uro
+pipx install git+https://github.com/s0md3v/uro.git
+
+# install hive (fast scanner for checking live urls)
+pipx install git+https://github.com/gnebbia/halive.git
+pipx runpip halive install requests
+
 
 apt-get install nano
 
@@ -185,3 +194,44 @@ else
   echo "File $CONFIG_YML_PATH exists. Overwriting with new configuration."
   echo "$CONFIG_CONTENT" > "$CONFIG_YML_PATH"
 fi
+
+
+# exploit installation
+
+# xss 
+echo "Installing qsreplace..."
+go install -v github.com/tomnomnom/qsreplace@latest
+sudo cp ~/go/bin/qsreplace /usr/bin/
+
+echo "Installing freq..."
+go install github.com/takshal/freq@latest
+sudo cp ~/go/bin/freq /usr/bin/
+
+# sql
+pipx install git+https://github.com/r0oth3x49/ghauri.git
+
+# directory transversal
+sudo apt-get install -y git perl libwww-perl
+sudo cpan -i LWP::UserAgent
+cd /root/tool
+git clone https://github.com/wireghoul/dotdotpwn.git
+cd dotdotpwn
+chmod +x dotdotpwn.pl
+sudo ln -s $(pwd)/dotdotpwn.pl /usr/local/bin/dotdotpwn
+export PERL5LIB=$(pwd)
+cd /root/webrecon 
+
+
+# lfi 
+cd /root/tool
+git clone https://github.com/mzfr/liffy.git
+cd liffy
+python3 -m venv liffy
+source liffy/bin/activate
+pip3 install -r requirements.txt
+deactivate
+cd /root/web-recon
+
+
+
+

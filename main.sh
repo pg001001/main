@@ -9,7 +9,7 @@ fi
 domain=$1
 
 # Ensure all required scripts are executable
-chmod +x subdomain_find.sh url_find.sh js_find.sh port_scan.sh 
+chmod +x subdomain_find.sh url_find.sh js_find.sh port_scan.sh xss.sh sql.sh lfi.sh
 
 # Run subdomain enumeration 
 echo "Starting subdomain enumeration..."
@@ -26,5 +26,17 @@ echo "Starting JavaScript file analysis..."
 # Run port scanning 
 echo "Starting port scanning..."
 ./port_scan.sh "$domain"
+
+# exploit 
+
+# xss
+./xss.sh /root/main/"$domain"/vuln/xss.txt
+
+# sql
+./sql.sh /root/main/"$domain"/vuln/sqli.txt
+
+# lfi or directory transversal
+./lfi.sh /root/main/"$domain"/vuln/lfi.txt
+
 
 echo "All tasks completed for ${domain}. Results are stored in the respective directories."
