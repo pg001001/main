@@ -192,8 +192,8 @@ FILTER_CODE: 404,301,302
 FILTER_MIME: text/css,image/jpeg,image/jpg,image/png,image/svg+xml,image/gif,image/tiff,image/webp,image/bmp,image/vnd,image/x-icon,image/vnd.microsoft.icon,font/ttf,font/woff,font/woff2,font/x-woff2,font/x-woff,font/otf,audio/mpeg,audio/wav,audio/webm,audio/aac,audio/ogg,audio/wav,audio/webm,video/mp4,video/mpeg,video/webm,video/ogg,video/mp2t,video/webm,video/x-msvideo,video/x-flv,application/font-woff,application/font-woff2,application/x-font-woff,application/x-font-woff2,application/vnd.ms-fontobject,application/font-sfnt,application/vnd.android.package-archive,binary/octet-stream,application/octet-stream,application/pdf,application/x-font-ttf,application/x-font-otf,video/webm,video/3gpp,application/font-ttf,audio/mp3,audio/x-wav,image/pjpeg,audio/basic,application/font-otf,application/x-ms-application,application/x-msdownload,video/x-ms-wmv,image/x-png,video/quicktime,image/x-ms-bmp,font/opentype,application/x-font-opentype,application/x-woff,audio/aiff
 FILTER_URL: .css,.jpg,.jpeg,.png,.svg,.img,.gif,.mp4,.flv,.ogv,.webm,.webp,.mov,.mp3,.m4a,.m4p,.scss,.tif,.tiff,.ttf,.otf,.woff,.woff2,.bmp,.ico,.eot,.htc,.rtf,.swf,.image,/image,/img,/css,/wp-json,/wp-content,/wp-includes,/theme,/audio,/captcha,/font,node_modules,/jquery,/bootstrap
 FILTER_KEYWORDS: admin,login,logon,signin,signup,register,registration,dash,portal,ftp,panel,.js,api,robots.txt,graph,gql,config,backup,debug,db,database,git,cgi-bin,swagger,zip,.rar,tar.gz,internal,jira,jenkins,confluence,atlassian,okta,corp,upload,delete,email,sql,create,edit,test,temp,cache,wsdl,log,payment,setting,mail,file,redirect,chat,billing,doc,trace,ftp,gateway,import,proxy,dev,stage,stg,uat,sonar.ci.,.cp.
-URLSCAN_API_KEY:
-VIRUSTOTAL_API_KEY:
+URLSCAN_API_KEY: 71e965fc-8173-4038-8469-db2e284bbf69
+VIRUSTOTAL_API_KEY: 416831de42328f797f483af38bd172bea6039adad6c95dcc58e4d16ba323b389
 CONTINUE_RESPONSES_IF_PIPED: True
 WEBHOOK_DISCORD: YOUR_WEBHOOK
 DEFAULT_OUTPUT_DIR:
@@ -220,29 +220,14 @@ mkdir -p "$HOME/.config/subfinder/"
 
 # Configuration content
 SUBFINDER_CONFIG_CONTENT=$(cat <<EOF
-bevigil: []
-binaryedge: []
-bufferover: []
-builtwith: []
-censys: []
-certspotter: []
-chaos: []
-fullhunt: []
-github: []
-hunter: []
-intelx: []
-leakix: []
-netlas: []
-passivetotal: []
-quake: []
-redhuntlabs: []
-robtex: []
-securitytrails: []
-shodan: []
-threatbook: []
-virustotal: []
-whoisxmlapi: []
-zoomeyeapi: []
+binaryedge: [e8adae1c-4bc4-4f4f-8a29-534fd0416843]
+builtwith: [5f2f5843-4fef-41c7-b5f7-4e47900a9947]
+censys: [b73dd7a9-a5a5-4b0e-9741-8dec80d91df5]
+certspotter: [k53416_nEp1yMlhFVM3xMuasoM0]
+chaos: [186e1abc-0816-4c73-b735-1cba4226f7f5]
+robtex: [IoMfFviRqc4hJocksAoI]
+shodan: [D4NK08OntAJpS3lz4ybqkrfZaGfwU2RY]
+virustotal: [afbb0dc32e256f2f480591199a9df085cbc05ecbf979be46bf17976a581ed0b5]
 EOF
 )
 
