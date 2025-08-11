@@ -43,9 +43,9 @@ source ~/.bashrc
 # Install subdomain script 
 
 # Install assetfinder
-echo "Installing assetfinder..."
-go install -v github.com/pg001001/assetfinder@latest
-sudo cp ~/go/bin/assetfinder /usr/bin/
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+sudo cp ~/go/bin/subfinder /usr/bin/
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # Install httprobe and httpx
 echo "Installing httprobe..."
@@ -65,14 +65,6 @@ pipx install git+https://github.com/maurosoria/dirsearch.git
 pipx ensurepath
 
 # Install url script 
-
-echo "Installing gau..."
-go install github.com/lc/gau/v2/cmd/gau@latest
-sudo cp ~/go/bin/gau /usr/local/bin/
-
-go install github.com/bp0lr/gauplus@latest
-sudo cp ~/go/bin/gauplus /usr/local/bin/
-
 echo "Installing katana..."
 go install github.com/projectdiscovery/katana/cmd/katana@latest
 sudo cp ~/go/bin/katana /usr/local/bin/
